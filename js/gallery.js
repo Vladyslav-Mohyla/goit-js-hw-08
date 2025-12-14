@@ -69,7 +69,7 @@ const gallery = document.querySelector(".gallery");
 gallery.innerHTML = images
   .map(({ preview, original, description }) => {
     return `
-    <div class="gallery__item">
+    <li class="gallery__item">
         <a class="gallery__link" href="${original}">
             <img
                 class="gallery__image"
@@ -78,7 +78,7 @@ gallery.innerHTML = images
                 alt="${description}"
             />
         </a>
-    </div>
+    </li>
   `;
   })
   .join("");
@@ -96,3 +96,5 @@ gallery.addEventListener("click", (event) => {
     )
     .show();
 });
+
+console.log("gallery.innerHTML:", gallery.innerHTML);
